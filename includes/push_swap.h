@@ -1,0 +1,62 @@
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include "./libft/libft.h"
+# include "./ft_printf/srcs/ft_printf.h"
+
+typedef struct s_push
+{
+    int *a;
+    int *b;
+    int *aux;
+    int size_a;
+    int size_b;
+}               t_push;
+
+void    ft_some_args(t_push *p, int argc, char *argv[]);
+void    ft_unique_args(t_push *p, int argc, char *argv[]);
+void	ft_init_struct(t_push *p, int size);
+//------------MOVES---------------
+void	ft_rra(t_push *p);
+void	ft_rrb(t_push *p);
+void	ft_rrr(t_push *p);
+void	ft_ra(t_push *p);
+void	ft_rb(t_push *p);
+void	ft_rr(t_push *p);
+void	ft_pa(t_push *p);
+void	ft_pb(t_push *p);
+void	ft_ss(t_push *p);
+void	ft_sb(t_push *p);
+void	ft_sa(t_push *p);
+//------------LAUNCH-MOVES---------------
+void	ft_launch_sa(t_push *p);
+void	ft_launch_sb(t_push *p);
+void	ft_launc_ss(t_push *p);
+void	ft_launch_ra(t_push *p);
+void	ft_launch_rb(t_push *p);
+void	ft_launch_rr(t_push *p);
+void	ft_launch_rra(t_push *p);
+void	ft_launch_rrb(t_push *p);
+void	ft_launch_rrr(t_push *p);
+void	ft_launch_pa(t_push *p);
+void	ft_launch_pb(t_push *p);
+//------------UTILS---------------
+void	ft_swap(int *a, int *b);
+//------------SOLUTIONS---------------
+void    ft_create_solution(t_push *p);
+void	ft_order_two_nums(t_push *p);
+void	ft_order_three_nums(t_push *p);
+void	ft_order_hundred_nums(t_push *p);
+//-------------THREE------------------
+void	ft_case_one(t_push *p);
+void	ft_case_two(t_push *p);
+void	ft_case_three(t_push *p);
+void	ft_case_four(t_push *p);
+void	ft_case_five(t_push *p);
+//-------------FIVE------------------
+void    ft_loop(t_push *p);
+void	ft_case_five_nums(t_push *p);
+void	ft_case_four_nums(t_push *p);
+void	ft_order_five_nums(t_push *p);
+
+#endif
