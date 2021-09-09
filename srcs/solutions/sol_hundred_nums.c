@@ -60,7 +60,7 @@ static int	ft_check_down_moves(t_push *p, int max_value_in_chunk)
 {
 	int	i;
 
-	i = p->size_a;
+	i = p->size_a - 1;
 	while (i > 0)
 	{
 		if (p->a[i] < max_value_in_chunk)
@@ -90,7 +90,7 @@ static void	ft_order_stack_b(t_push *p)
 		i = 0;
 		while (p->b[i] != max_value)
 			i++;
-		if (i < (p->size_b - i))
+		if (i < ((p->size_b -1) - i))
 		{
 			change_value = p->b[i];
 			while (p->b[0] != change_value)
@@ -147,29 +147,28 @@ static void	ft_case_down(int change_value, t_push *p)
 void	ft_order_hundred_nums(t_push *p)
 {
 	int	i;
-	int	times;
 	int	down_moves;
 	int	up_moves;
 	int	size;
+	int	x = 0;
 
-	times = 1;
 	p->aux = ft_get_order_stack(p);
 	size = p->size_a;
 	i = 0;
-	while (times <= ft_detect_cut_size(size))
+	while ((p->size_a) != 0)
 	{
 		i = 0;
-		while (i < size/ft_detect_cut_size(size))
+		x += 20;
+		while (i < 20)
 		{
-			down_moves = ft_check_down_moves(p, p->aux[times*(size/ft_detect_cut_size(size))]);
-			up_moves = ft_check_up_moves(p, p->aux[times*(size/ft_detect_cut_size(size))]);
-			if (up_moves < p->size_a - down_moves)
+			down_moves = ft_check_down_moves(p, p->aux[x]);
+			up_moves = ft_check_up_moves(p, p->aux[x]);
+			if (up_moves < (p->size_a -1) - down_moves)
 				ft_case_up(p->a[up_moves], p);
 			else
 				ft_case_down(p->a[down_moves], p);
 			i++;
 		}
-		times++;
 	}
 	ft_order_stack_b(p);
 }
