@@ -6,15 +6,15 @@
 
 typedef struct s_push
 {
-    int *a;
-    int *b;
-    int *aux;
-    int size_a;
-    int size_b;
-}               t_push;
+	int	*a;
+	int	*b;
+	int	*aux;
+	int	size_a;
+	int	size_b;
+}	t_push;
 
-void    ft_some_args(t_push *p, int argc, char *argv[]);
-void    ft_unique_args(t_push *p, int argc, char *argv[]);
+void	ft_some_args(t_push *p, int argc, char *argv[]);
+void	ft_unique_args(t_push *p, int argc, char *argv[]);
 void	ft_init_struct(t_push *p, int size);
 //------------MOVES---------------
 void	ft_rra(t_push *p);
@@ -42,8 +42,9 @@ void	ft_launch_pa(t_push *p);
 void	ft_launch_pb(t_push *p);
 //------------UTILS---------------
 void	ft_swap(int *a, int *b);
+int	*ft_get_order_stack(t_push *p);
 //------------SOLUTIONS---------------
-void    ft_create_solution(t_push *p);
+void	ft_create_solution(t_push *p);
 void	ft_order_two_nums(t_push *p);
 void	ft_order_three_nums(t_push *p);
 void	ft_order_hundred_nums(t_push *p);
@@ -54,9 +55,10 @@ void	ft_case_three(t_push *p);
 void	ft_case_four(t_push *p);
 void	ft_case_five(t_push *p);
 //-------------FIVE------------------
-void    ft_loop(t_push *p);
+void	ft_loop(t_push *p);
 void	ft_case_five_nums(t_push *p);
 void	ft_case_four_nums(t_push *p);
 void	ft_order_five_nums(t_push *p);
-
+//------------HUNDRED----------------
+void	ft_order_stack_b(t_push *p);
 #endif

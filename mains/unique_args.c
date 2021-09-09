@@ -1,7 +1,4 @@
-
 #include "../includes/push_swap.h"
-
-//static void ft_free_tmp(char )
 
 static int	ft_get_size(char *argv)
 {
@@ -21,7 +18,7 @@ static int	ft_get_size(char *argv)
 	return (size + 1);
 }
 
-static void ft_free_tmp(char **tmp, int size)
+static void	ft_free_tmp(char **tmp, int size)
 {
 	int	i;
 	int	j;
@@ -35,10 +32,10 @@ static void ft_free_tmp(char **tmp, int size)
 	free(tmp);
 }
 
-void    ft_unique_args(t_push *p, int argc, char *argv[])
+void	ft_unique_args(t_push *p, int argc, char *argv[])
 {
-	int i;
-	int	tmp_size;
+	int		i;
+	int		tmp_size;
 	char	**tmp;
 
 	i = 0;

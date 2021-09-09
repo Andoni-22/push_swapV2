@@ -20,8 +20,29 @@ SOURCES =	$(MAINDIR)/push_swap.c		\
 			$(SLDIR)/sol_three_nums.c	\
 			$(SLDIR)/sol_five_nums.c	\
 			$(SLDIR)/sol_hundred_nums.c	\
+			$(SLDIR)/sol_b.c	\
 
 name =	push_swap
 
-all:
+all:	
+	$(MAKE) -C includes/libft
+	$(MAKE) -C includes/ft_printf
+	gcc  $(SOURCES) includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)
+	# -ggdb -fsanitize=address -fno-omit-frame-pointer
+	
+clean: 
+	rm -rf $(name)
+	$(MAKE) fclean -C includes/libft
+	$(MAKE) fclean -C includes/ft_printf
+
+fclean:
+	rm -rf $(name)	
+	$(MAKE) fclean -C includes/libft
+	$(MAKE) fclean -C includes/ft_printf
+
+
+
+
+.PHONY:
+	aall:
 	gcc $(SOURCES) includes/push_swap.h includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)

@@ -1,4 +1,3 @@
-
 #include "../../includes/push_swap.h"
 
 void	ft_ra(t_push *p)

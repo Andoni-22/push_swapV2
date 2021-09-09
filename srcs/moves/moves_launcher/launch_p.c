@@ -1,4 +1,3 @@
-
 #include "../../../includes/push_swap.h"
 
 void	ft_launch_pa(t_push *p)

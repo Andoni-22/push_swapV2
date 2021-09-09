@@ -1,4 +1,3 @@
-
 #include "../../includes/push_swap.h"
 
 void	ft_sa(t_push *p)
@@ -9,8 +8,7 @@ void	ft_sa(t_push *p)
 }
 
 void	ft_sb(t_push *p)
-{
-	
+{	
 	if (p->size_b <= 0)
 		return ;
 	ft_swap(&p->b[0], &p->b[1]);

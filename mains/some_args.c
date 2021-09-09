@@ -1,4 +1,3 @@
-
 #include "../includes/push_swap.h"
 
 void	ft_init_struct(t_push *p, int size)
@@ -10,7 +9,7 @@ void	ft_init_struct(t_push *p, int size)
 	p->size_b = 0;
 }
 
-void    ft_some_args(t_push *p, int argc, char *argv[])
+void	ft_some_args(t_push *p, int argc, char *argv[])
 {
 	int	i;
 

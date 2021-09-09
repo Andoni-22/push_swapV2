@@ -8,12 +8,12 @@ static void	ft_make_ra(t_push *p, int low_num)
 	while (i < p->size_a)
 	{
 		if (p->a[0] == low_num)
-			break;
+			break ;
 		ft_launch_ra(p);
 	}
 }
 
-void	 ft_loop(t_push *p)
+void	ft_loop(t_push *p)
 {
 	int	low_num;
 	int	i;
@@ -62,5 +62,5 @@ void	ft_order_five_nums(t_push *p)
 	if (p->size_a == 4)
 		ft_case_four_nums(p);
 	else
-		ft_case_five_nums(p);
+ 		ft_case_five_nums(p);
 }
