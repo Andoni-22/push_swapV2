@@ -27,8 +27,8 @@ name =	push_swap
 all:	
 	$(MAKE) -C includes/libft
 	$(MAKE) -C includes/ft_printf
-	gcc  $(SOURCES) includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)
-	# -ggdb -fsanitize=address -fno-omit-frame-pointer
+	gcc  $(SOURCES) -fsanitize=address -g3 includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)
+	# -fsanitize=address -g3 
 	
 clean: 
 	rm -rf $(name)
@@ -44,5 +44,5 @@ fclean:
 
 
 .PHONY:
-	aall:
+	all:
 	gcc $(SOURCES) includes/push_swap.h includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)

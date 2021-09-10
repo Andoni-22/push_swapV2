@@ -51,6 +51,7 @@ static void	ft_case_down(int change_value, t_push *p)
 			ft_launch_sa(p);
 			break ;
 		}
+		//ft_printf("change_value -> %d && A[0] = %d\n", change_value, p->a[0]);
 		ft_launch_rra(p);
 	}
 	ft_launch_pb(p);
@@ -61,16 +62,19 @@ void	ft_order_hundred_nums(t_push *p)
 	int	i;
 	int	down_moves;
 	int	up_moves;
-	int	size;
+	int	chunk_size;
 	int	x;
 
 	x = 0;
 	i = 0;
+	chunk_size = 20;
+	if (p->size_a % 20 != 0)
+		chunk_size = 1;
 	while ((p->size_a) != 0)
 	{
 		i = 0;
-		x += 20;
-		while (i < 20)
+		x += chunk_size;
+		while (i < chunk_size)
 		{
 			down_moves = ft_check_down_moves(p, p->aux[x]);
 			up_moves = ft_check_up_moves(p, p->aux[x]);
