@@ -64,9 +64,11 @@ void	ft_order_hundred_nums(t_push *p)
 	int	up_moves;
 	int	chunk_size;
 	int	x;
+	int	size;
 
 	x = 0;
 	i = 0;
+	size = p->size_a;
 	chunk_size = 20;
 	if (p->size_a % 20 != 0)
 		chunk_size = 1;
@@ -76,6 +78,8 @@ void	ft_order_hundred_nums(t_push *p)
 		x += chunk_size;
 		while (i < chunk_size)
 		{
+			if (x >= size)
+				x = size - 1;
 			down_moves = ft_check_down_moves(p, p->aux[x]);
 			up_moves = ft_check_up_moves(p, p->aux[x]);
 			if (up_moves < (p->size_a - 1) - down_moves)

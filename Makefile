@@ -27,7 +27,7 @@ name =	push_swap
 all:	
 	$(MAKE) -C includes/libft
 	$(MAKE) -C includes/ft_printf
-	gcc  $(SOURCES) -fsanitize=address -g3 includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)
+	gcc	$(SOURCES) -fsanitize=address -g3 includes/libft/libft.a includes/ft_printf/libftprintf.a -o $(name)
 	# -fsanitize=address -g3 
 	
 clean: 

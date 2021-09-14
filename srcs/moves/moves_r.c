@@ -2,20 +2,17 @@
 
 void	ft_ra(t_push *p)
 {
-	int	i;
+	int	count;
 	int	aux;
 
-	i = 0;
-	if (p->size_a > 1)
+	aux = p->a[0];
+	count = 0;
+	while (count < (p->size_a - 1))
 	{
-		aux = p->a[i];
-		while (i < p->size_a)
-		{
-			p->a[i] = p->a[i + 1];
-			i++;
-		}
-		p->a[i - 1] = aux;
+		p->a[count] = p->a[count + 1];
+		count++;
 	}
+	p->a[p->size_a - 1] = aux;
 }
 
 void	ft_rb(t_push *p)

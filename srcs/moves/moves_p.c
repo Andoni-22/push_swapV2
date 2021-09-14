@@ -12,7 +12,7 @@ void	ft_pa(t_push *p)
 	}
 	p->a[0] = p->b[0];
 	count = 0;
-	while (p->size_b >= (count) + 1)
+	while (p->size_b - 1 >= (count) + 1)
 	{
 		p->b[count] = p->b[count + 1];
 		count++;
