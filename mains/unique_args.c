@@ -32,6 +32,23 @@ static void	ft_free_tmp(char **tmp, int size)
 	free(tmp);
 }
 
+void	ft_check_str_or_num(char *str)
+{
+	int	size;
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] != '0')
+		{
+			ft_printf("ERROR\n");
+			exit(1);
+		}
+		i++;
+	}
+}
+
 void	ft_unique_args(t_push *p, int argc, char *argv[])
 {
 	int		i;
@@ -46,6 +63,8 @@ void	ft_unique_args(t_push *p, int argc, char *argv[])
 	{
 		p->a[i] = ft_atoi(tmp[i]);
 		p->a[i] = ft_atoi(tmp[i]);
+		if (p->a[i] == 0)
+			ft_check_str_or_num(tmp[i]);
 		i++;
 	}
 	ft_free_tmp(tmp, tmp_size);

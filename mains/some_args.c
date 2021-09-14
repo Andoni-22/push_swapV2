@@ -19,6 +19,8 @@ void	ft_some_args(t_push *p, int argc, char *argv[])
 	{
 		p->a[i] = ft_atoi(argv[i + 1]);
 		p->aux[i] = ft_atoi(argv[i + 1]);
+		if (p->a[i] == 0)
+			ft_check_str_or_num(argv[i + 1]);
 		i++;
 	}
 }

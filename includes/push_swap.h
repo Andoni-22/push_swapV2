@@ -61,4 +61,5 @@ void	ft_case_four_nums(t_push *p);
 void	ft_order_five_nums(t_push *p);
 //------------HUNDRED----------------
 void	ft_order_stack_b(t_push *p);
+void	ft_check_str_or_num(char *str);
 #endif

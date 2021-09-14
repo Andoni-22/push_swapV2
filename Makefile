@@ -20,7 +20,7 @@ SOURCES =	$(MAINDIR)/push_swap.c		\
 			$(SLDIR)/sol_three_nums.c	\
 			$(SLDIR)/sol_five_nums.c	\
 			$(SLDIR)/sol_hundred_nums.c	\
-			$(SLDIR)/sol_b.c	\
+			$(SLDIR)/sol_b.c			\
 
 name =	push_swap
 
