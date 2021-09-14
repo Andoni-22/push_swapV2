@@ -62,4 +62,5 @@ void	ft_order_five_nums(t_push *p);
 //------------HUNDRED----------------
 void	ft_order_stack_b(t_push *p);
 void	ft_check_str_or_num(char *str);
+int		ft_check_is_order(t_push *p);
 #endif

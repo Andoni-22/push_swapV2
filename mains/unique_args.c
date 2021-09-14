@@ -56,13 +56,15 @@ void	ft_unique_args(t_push *p, int argc, char *argv[])
 	char	**tmp;
 
 	i = 0;
+	if (argc == 2)
+		exit(1);
 	tmp_size = ft_get_size(argv[1]);
 	ft_init_struct(p, tmp_size);
 	tmp = ft_split(argv[1], ' ');
 	while (tmp[i] != NULL)
 	{
 		p->a[i] = ft_atoi(tmp[i]);
-		p->a[i] = ft_atoi(tmp[i]);
+		p->aux[i] = ft_atoi(tmp[i]);
 		if (p->a[i] == 0)
 			ft_check_str_or_num(tmp[i]);
 		i++;

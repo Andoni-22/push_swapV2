@@ -37,3 +37,21 @@ int	*ft_get_order_stack(t_push *p)
 	return (aux);
 }
 
+int	ft_check_is_order(t_push *p)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	if (p->size_a == 1)
+		return (1);
+	while (i < p->size_a - 1)
+	{
+		j = i + 1;
+		if (p->a[i] > p->a[j])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
