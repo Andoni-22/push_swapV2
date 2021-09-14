@@ -36,3 +36,4 @@ int	*ft_get_order_stack(t_push *p)
 	}
 	return (aux);
 }
+

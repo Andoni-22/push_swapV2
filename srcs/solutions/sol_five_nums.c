@@ -62,5 +62,5 @@ void	ft_order_five_nums(t_push *p)
 	if (p->size_a == 4)
 		ft_case_four_nums(p);
 	else
- 		ft_case_five_nums(p);
+		ft_case_five_nums(p);
 }

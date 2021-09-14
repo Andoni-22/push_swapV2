@@ -51,7 +51,6 @@ static void	ft_case_down(int change_value, t_push *p)
 			ft_launch_sa(p);
 			break ;
 		}
-		//ft_printf("change_value -> %d && A[0] = %d\n", change_value, p->a[0]);
 		ft_launch_rra(p);
 	}
 	ft_launch_pb(p);

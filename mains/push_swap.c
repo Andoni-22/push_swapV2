@@ -6,6 +6,7 @@ static void	ft_free_struct(t_push *p)
 	free(p->b);
 	free(p->aux);
 }
+
 static void	ft_error(t_push *p)
 {
 	ft_printf("ERROR\n");
@@ -51,18 +52,15 @@ int	main(int argc, char *argv[])
 	int		i;
 
 	if (argc == 2)
-		ft_unique_args(&p, argc, argv);/*TMP */
+		ft_unique_args(&p, argc, argv);
 	else if (argc > 2)
-		ft_some_args(&p, argc, argv); /*Bucle que recorra todo argv*/
+		ft_some_args(&p, argc, argv);
 	else
 		ft_error(&p);
 	ft_check_errors(&p);
 	ft_check_max_int(&p);
 	p.aux = ft_get_order_stack(&p);
 	ft_create_solution(&p);
-	/*for(int x = 0; x < p.size_a; x++)
-		ft_printf("A[%d] = %d\n", x, p.a[x]);*/
-	ft_free_struct(&p);	
-
+	ft_free_struct(&p);
 	return (0);
 }
